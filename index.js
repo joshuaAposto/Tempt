@@ -116,7 +116,7 @@ app.get('/ngl', async (req, res) => {
       const message = getRandomMessage(category);
       const payload = { username, question: message, deviceId };
 
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 2000));
 
       const response = await axios.post(url, payload, { headers });
 
